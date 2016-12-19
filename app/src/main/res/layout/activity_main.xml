@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_widget">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_view"
+        tools:context=".activity.MainActivity">
+        <ImageSwitcher
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image_switcher"/>
+        <include layout="@layout/title_layout"
+            android:id="@+id/title_layout"/>
+        <com.example.mzc.iweather.uicomponents.MyViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/my_viewpager"
+            android:layout_below="@id/title_layout"/>
+    </RelativeLayout>
+
+    <include layout="@layout/drawer_layout"/>
+
+</android.support.v4.widget.DrawerLayout>

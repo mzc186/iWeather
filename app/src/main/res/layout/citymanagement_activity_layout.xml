@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_ls_6">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#2b000000">
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/backbutton_citymanagement_activity"
+        android:background="@drawable/back_button_selector"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="增删城市"
+        android:layout_centerInParent="true"
+        android:textSize="22sp"
+        android:textColor="#eeeeee"/>
+    <Button
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/addbutton_citymanagement_activity"
+        android:background="@drawable/add_button_selector"/>
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/addbutton_citymanagement_activity"
+        android:background="@drawable/ic_action_edit"
+        android:id="@+id/editbutton_citymanagement_activity"/>
+</RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ffffff"
+        android:id="@+id/recyclerview_citymanagement_activity"/>
+</LinearLayout>
