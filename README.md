@@ -6,6 +6,7 @@ This is an android weather app project. The app is friendly in UI with full func
 3. Friendly UI.The messages are shown in a good readable way. And the background changes as you page through.
    To refresh the weather data, just pull to refresh.
 4. Not include any annoying ads.
+
 # Specifications
 1. It only works for cities in china so far.
 2. The weather data service is provided by http://www.heweather.com/ (ps: it is free but not very stable)
