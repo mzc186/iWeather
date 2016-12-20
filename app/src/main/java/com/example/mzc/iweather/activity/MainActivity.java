@@ -14,12 +14,14 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.example.mzc.iweather.R;
 import com.example.mzc.iweather.datautil.LunarCalendar;
 import com.example.mzc.iweather.datautil.MyConstantValues;
+import com.example.mzc.iweather.displayutil.DisplayUtil;
 import com.example.mzc.iweather.uicomponents.MyFragmentStatePagerAdapter;
 import com.example.mzc.iweather.uicomponents.MyViewPager;
 
@@ -53,6 +55,7 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
     private int[] backGroundRes;
     private int lastPageNum;
     private int nowPageNum;
+    private LinearLayout ll_dot_group;
 
 
     @Override
@@ -100,7 +103,7 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
                     mfspa = new MyFragmentStatePagerAdapter(getSupportFragmentManager(), this);
                     myViewPager.setAdapter(mfspa);
                     mTitleText.setText(wnl_spf.getString("selectedCountyName0",""));
-                    Runtime.getRuntime().gc();
+                    initDotGroup();
                 }
                 break;
             case 2:
@@ -109,6 +112,7 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
                     mfspa = new MyFragmentStatePagerAdapter(getSupportFragmentManager(), this);
                     myViewPager.setAdapter(mfspa);
                     mTitleText.setText(wnl_spf.getString("selectedCountyName0",""));
+                    initDotGroup();
                 }
             default:
                 break;
@@ -189,6 +193,10 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
                 mTitleText.setText(mCountyName);
                 lastPageNum=nowPageNum;
                 nowPageNum=position;
+                View dotView=ll_dot_group.getChildAt(lastPageNum);
+                dotView.setEnabled(false);
+                dotView=ll_dot_group.getChildAt(position);
+                dotView.setEnabled(true);
             }
             @Override
             public void onPageScrollStateChanged(int state) {
@@ -202,8 +210,10 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
         }
         );
 
+        ll_dot_group=(LinearLayout)findViewById(R.id.ll_dot_group);
+        initDotGroup();
     }
-    
+
     
     //initialize independent basic data
     private void initBasicData(){
@@ -283,6 +293,28 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
         }
     }
 
+    private void initDotGroup(){
+        ll_dot_group.removeAllViews();
+        String tmp=wnl_spf.getString("selectedCountyCount", "0");
+        int cityCount=Integer.parseInt(tmp);
+        float pxScale= DisplayUtil.pxScale(this);
+        int lp_wh=(int)(pxScale*6);
+        //reset pageNum in case the dotView shows incorrectly
+        lastPageNum=nowPageNum=0;
+        for(int i=0;i<cityCount;i++){
+            View dotView=new View(getApplicationContext());
+            dotView.setBackgroundResource(R.drawable.dot_selector);
+            dotView.setEnabled(false);
+            LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(lp_wh,lp_wh);
+            if(i!=0){
+                lp.leftMargin=lp_wh;
+            }else{
+                dotView.setEnabled(true);
+            }
+            dotView.setLayoutParams(lp);
+            ll_dot_group.addView(dotView);
+        }
+    }
 
     @Override
     protected void onDestroy() {

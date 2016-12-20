@@ -22,7 +22,7 @@ public class HttpUtil {
                             connection=(HttpURLConnection) url.openConnection();
                             connection.setRequestMethod("GET");
                             if(getWeatherInfo){
-                                connection.setRequestProperty("apikey","Replace this string with your own baidu apikey");
+                                connection.setRequestProperty("apikey","Replace this string with your own baidu api key");
                                 connection.connect();
                                 InputStream in = connection.getInputStream();
                                 reader = new BufferedReader(new InputStreamReader(in,"UTF-8"));
