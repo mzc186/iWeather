@@ -1,25 +1,28 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:background="@drawable/listitem_selector_0">
     <Button
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="-12dp"
         android:background="@drawable/city_delete_normal"
         android:id="@+id/button_delete_city"
         android:visibility="gone"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:id="@+id/listitem_city_name"
         android:layout_toRightOf="@id/button_delete_city"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:text="厦门"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="厦门厦门"
         android:textSize="20sp"
         android:textColor="#ffffff"/>
     <ImageView
@@ -33,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="18dp"
         android:id="@+id/listitem_tmp_range"
         android:text="22°~26°"
         android:textSize="20sp"
