@@ -23,7 +23,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -44,7 +44,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -74,7 +74,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -85,7 +85,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -115,7 +115,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -126,7 +126,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -156,7 +156,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -167,7 +167,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -187,7 +187,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -197,7 +197,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -208,7 +208,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -228,7 +228,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -238,7 +238,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -249,7 +249,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -269,7 +269,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -279,7 +279,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -290,7 +290,7 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -310,7 +310,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="晴转多云"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             android:textSize="14sp"/>
         <TextView
             android:layout_width="54dp"
@@ -320,7 +320,7 @@
             android:gravity="center"
             android:text="东北风"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"
+            android:textColor="#FFEAEAEA"
             />
         <TextView
             android:layout_width="54dp"
@@ -331,6 +331,6 @@
             android:gravity="center"
             android:text="3-4级"
             android:textSize="14sp"
-            android:textColor="#FFE6E6E6"/>
+            android:textColor="#FFEAEAEA"/>
     </LinearLayout>
 </LinearLayout>

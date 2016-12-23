@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         card_view:cardCornerRadius="15dp"
-        card_view:cardBackgroundColor="#3c000000"
+        card_view:cardBackgroundColor="#4f000000"
         card_view:cardElevation="0dp">
         <TableLayout
             android:layout_width="wrap_content"
@@ -22,8 +22,8 @@
             <TableRow>
                 <TextView
                     android:text="AQI"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -34,15 +34,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/aqi"
                     android:text="135"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="PM2.5"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -52,15 +52,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/pm25"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="PM10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -70,15 +70,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/pm10"
                     android:text="12"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="CO"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -88,15 +88,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/co"
                     android:text="0"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="SO₂"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -106,15 +106,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/so2"
                     android:text="3"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="NO₂"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -124,15 +124,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/no2"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="O₃"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -144,8 +144,8 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/o3"
                     android:text="93"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
         </TableLayout>
@@ -158,7 +158,7 @@
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="15dp"
         android:layout_marginLeft="40dp"
-        card_view:cardBackgroundColor="#3c000000"
+        card_view:cardBackgroundColor="#4f000000"
         card_view:cardElevation="0dp">
         <TableLayout
             android:layout_width="wrap_content"
@@ -166,8 +166,8 @@
             <TableRow>
                 <TextView
                     android:text="体感温度(C°)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
@@ -178,15 +178,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/feeling_tmp"
                     android:text="135"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="相对湿度(%)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -196,15 +196,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/relative_humidity"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="降雨量(mm)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -214,15 +214,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/precipitation"
                     android:text="12"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="气压(hPa)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -232,15 +232,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/air_pressure"
                     android:text="0"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="能见度(km)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -250,15 +250,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/visibility"
                     android:text="3"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="风力等级"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -268,15 +268,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/wind_scale"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="风速(km/h)"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -286,15 +286,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/wind_speed"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="风向（角度）"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"/>
@@ -304,15 +304,15 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/wind_degree"
                     android:text="10"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
             <TableRow>
                 <TextView
                     android:text="风向（方向）"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
@@ -324,8 +324,8 @@
                     android:layout_marginTop="5dp"
                     android:id="@+id/wind_orientation"
                     android:text="93"
-                    android:textSize="16sp"
-                    android:textColor="#FFE6E6E6"
+                    android:textSize="15sp"
+                    android:textColor="#FFEAEAEA"
                     android:gravity="center_horizontal"/>
             </TableRow>
 

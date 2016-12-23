@@ -30,7 +30,7 @@
                 android:layout_marginTop="42dp"
                 android:layout_marginBottom="15dp"
                 card_view:cardCornerRadius="15dp"
-                card_view:cardBackgroundColor="#3c000000"
+                card_view:cardBackgroundColor="#4f000000"
                 card_view:cardElevation="0dp">
                 <HorizontalScrollView
                     android:layout_width="330dp"

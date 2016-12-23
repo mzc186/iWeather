@@ -9,7 +9,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="15dp"
-    card_view:cardBackgroundColor="#3c000000"
+    card_view:cardBackgroundColor="#4f000000"
     card_view:cardElevation="0dp">
     <TableLayout
         android:layout_width="wrap_content"
@@ -28,8 +28,8 @@
                 android:layout_marginTop="5dp"
                 android:id="@+id/sport_index"
                 android:text="运动指数：较适宜"
-                android:textSize="16sp"
-                android:textColor="#FFE6E6E6"
+                android:textSize="15sp"
+                android:textColor="#FFEAEAEA"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"/>
         </TableRow>
@@ -48,8 +48,8 @@
                 android:layout_marginTop="5dp"
                 android:id="@+id/flu_index"
                 android:text="感冒指数：少发"
-                android:textColor="#FFE6E6E6"
-                android:textSize="16sp"
+                android:textColor="#FFEAEAEA"
+                android:textSize="15sp"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"/>
         </TableRow>
@@ -68,8 +68,8 @@
                 android:layout_marginTop="5dp"
                 android:id="@+id/travel_index"
                 android:text="旅游指数：较适宜"
-                android:textSize="16sp"
-                android:textColor="#FFE6E6E6"
+                android:textSize="15sp"
+                android:textColor="#FFEAEAEA"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"/>
         </TableRow>
@@ -88,8 +88,8 @@
                 android:layout_marginTop="5dp"
                 android:id="@+id/ultraviolet_index"
                 android:text="紫外线指数：中等"
-                android:textSize="16sp"
-                android:textColor="#FFE6E6E6"
+                android:textSize="15sp"
+                android:textColor="#FFEAEAEA"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"/>
         </TableRow>
@@ -110,8 +110,8 @@
                 android:layout_marginBottom="5dp"
                 android:id="@+id/wear_index"
                 android:text="穿衣指数：炎热"
-                android:textSize="16sp"
-                android:textColor="#FFE6E6E6"
+                android:textSize="15sp"
+                android:textColor="#FFEAEAEA"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"/>
         </TableRow>

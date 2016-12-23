@@ -107,6 +107,7 @@ public class ChooseCityActivity extends Activity {
                     if(!selected_flag){
                         mEditor.putString("selectedCountyCode"+selectedCountyCount,tmpStr);
                         tmpStr=selectedCounty.getCountyName();
+                        tmpStr=tmpStr.trim();
                         mEditor.putString("selectedCountyName"+selectedCountyCount,tmpStr);
 
                         String httpUrl = "http://apis.baidu.com/heweather/weather/free";

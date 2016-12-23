@@ -29,7 +29,7 @@
         android:textSize="24sp"
         android:layout_centerInParent="true"
         android:text="厦 门"
-        android:textColor="#e6e6e6" />
+        android:textColor="#FFEEEEEE" />
 </RelativeLayout>
 
     <LinearLayout

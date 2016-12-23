@@ -30,7 +30,7 @@ public class DataDisposalUtil {
                     String[] array=p.split("\\|");
                     Province province=new Province();
                     province.setProvinceCode(array[0]);
-                    province.setProvinceName(array[1]);
+                    province.setProvinceName(array[1].trim());
                     //save the data analyzed to the table of Province
                     weatherDB.saveProvince(province);
                 }
@@ -52,7 +52,7 @@ public class DataDisposalUtil {
                     String[] array=c.split("\\|");
                     City city=new City();
                     city.setCityCode(array[0]);
-                    city.setCityName(array[1]);
+                    city.setCityName(array[1].trim());
                     city.setProvinceId(provinceId);
                     //save the data analyzed to the table of City
                     weatherDB.saveCity(city);
@@ -74,7 +74,7 @@ public class DataDisposalUtil {
                     String[] array=c.split("\\|");
                     County county=new County();
                     county.setCountyCode(array[0]);
-                    county.setCountyName(array[1]);
+                    county.setCountyName(array[1].trim());
                     county.setCityId(cityId);
                     //save the data analyzed to the table of County
                     weatherDB.saveCounty(county);

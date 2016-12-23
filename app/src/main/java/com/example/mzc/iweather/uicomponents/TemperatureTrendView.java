@@ -82,7 +82,7 @@ public class TemperatureTrendView extends View {
         mLinePaint=new Paint();
         mLinePaint.setAntiAlias(true);
         mLinePaint.setStrokeWidth(5*pxScale/3);
-        mLinePaint.setColor(Color.argb(255,230,230,230));
+        mLinePaint.setColor(Color.argb(255,239,239,239));
 
         mTextPaint=new Paint();
         mTextPaint.setAntiAlias(true);
