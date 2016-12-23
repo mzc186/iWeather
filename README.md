@@ -14,5 +14,5 @@ This is an android weather app project. The app is friendly in UI with full func
    To visit baidu api store, go to this link http://apistore.baidu.com/
 4. Still, there is a lot to improve and innovate to make it a better weather app.
 5. Develop a weather app yourself is suitable especially for new android developers(of course,after you have learned the basic skills), hope this app can be a helping hand.
-6. To take a look  the App UI or download the app, click this link [iWeather/wiki](https://github.com/mzc186/iWeather/wiki).
+6. To take a look at the App UI or download the app, click this link [iWeather/wiki](https://github.com/mzc186/iWeather/wiki).
 6. For more information, welcome to visit my blog, [http://blog.csdn.net/mzc186](http://blog.csdn.net/mzc186).
