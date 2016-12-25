@@ -2,6 +2,7 @@ package com.example.mzc.iweather.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -25,8 +26,11 @@ import com.example.mzc.iweather.datautil.DataDisposalUtil;
 import com.example.mzc.iweather.netutil.HttpCallbackListener;
 import com.example.mzc.iweather.netutil.HttpUtil;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by MZC on 9/6/2016.
@@ -91,7 +95,7 @@ public class ChooseCityActivity extends Activity {
                     selectedCounty=countyList.get(position);
                     String tmpStr=wnl_spf.getString("selectedCountyCount","0");
                     selectedCountyCount=Integer.parseInt(tmpStr);
-                    SharedPreferences.Editor mEditor=wnl_spf.edit();
+                    final SharedPreferences.Editor wnlEditor=wnl_spf.edit();
                     tmpStr=selectedCounty.getCountyCode();
 
                     if(selectedCountyCount!=0){
@@ -105,10 +109,10 @@ public class ChooseCityActivity extends Activity {
                     }
 
                     if(!selected_flag){
-                        mEditor.putString("selectedCountyCode"+selectedCountyCount,tmpStr);
+                        wnlEditor.putString("selectedCountyCode"+selectedCountyCount,tmpStr);
                         tmpStr=selectedCounty.getCountyName();
                         tmpStr=tmpStr.trim();
-                        mEditor.putString("selectedCountyName"+selectedCountyCount,tmpStr);
+                        wnlEditor.putString("selectedCountyName"+selectedCountyCount,tmpStr);
 
                         String httpUrl = "http://apis.baidu.com/heweather/weather/free";
                         String urlPara=httpUrl+"?city="+tmpStr;
@@ -118,20 +122,25 @@ public class ChooseCityActivity extends Activity {
                             public void onFinish(String response) {
                                 DataDisposalUtil.handleWeatherDataResponse(ChooseCityActivity.this,
                                         response,selectedCounty.getCountyCode());
+                                SharedPreferences countySpf=getSharedPreferences(selectedCounty.getCountyCode(),
+                                        Context.MODE_PRIVATE);
+                                Date dt = new Date();
+                                DateFormat df = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.CHINA);
+                                countySpf.edit().putString("last_updated_at", df.format(dt)).apply();
+                                selectedCountyCount++;
+                                wnlEditor.putString("selectedCountyCount",""+selectedCountyCount);
+                                wnlEditor.apply();
+                                Intent  intent=new Intent();
+                                setResult(RESULT_OK,intent);
+                                finish();
                             }
                             @Override
                             public void onError(Exception e) {
                                 e.printStackTrace();
+                                Toast.makeText(ChooseCityActivity.this,selectedCounty.getCountyName()
+                                        +"天气数据更新失败，\n请检查网络连接",Toast.LENGTH_SHORT).show();
                             }
                         });
-
-                        sleep(500);
-                        selectedCountyCount++;
-                        mEditor.putString("selectedCountyCount",""+selectedCountyCount);
-                        mEditor.apply();
-                        Intent  intent=new Intent();
-                        setResult(RESULT_OK,intent);
-                        finish();
                     }
                 }
             }
@@ -140,13 +149,6 @@ public class ChooseCityActivity extends Activity {
     }
 
 
-    private void sleep(int sleepTime){
-        try{
-            Thread.sleep(sleepTime);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
 
     /**
      * query all provinces of the country firstly in database, if the result returned is null,
@@ -269,7 +271,8 @@ public class ChooseCityActivity extends Activity {
                     @Override
                     public void run() {
                         closeProgressDialog();
-                        Toast.makeText(ChooseCityActivity.this,"数据加载失败，请检查网络连接",Toast.LENGTH_LONG).show();
+                        Toast.makeText(ChooseCityActivity.this,"城市数据加载失败，请检查网络连接",
+                                Toast.LENGTH_LONG).show();
                     }
                 });
             }

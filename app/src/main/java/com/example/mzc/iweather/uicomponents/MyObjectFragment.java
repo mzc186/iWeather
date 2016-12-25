@@ -334,7 +334,7 @@ public class MyObjectFragment extends Fragment {
                             Date dt = new Date();
                             DateFormat df = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.CHINA);
                             mspf.edit().putString("last_updated_at", df.format(dt)).apply();
-                            Toast.makeText(mActivity,"数据更新成功",Toast.LENGTH_LONG).show();
+                            Toast.makeText(mActivity,mCountyName+"天气数据更新成功",Toast.LENGTH_SHORT).show();
                             mActivity.ffc_flag[mPosition]="false";
                         }
 
@@ -354,7 +354,8 @@ public class MyObjectFragment extends Fragment {
                             showWeather();
                         }
                         if(mActivity.ffc_flag[mPosition].equals("true")){
-                            Toast.makeText(mActivity,"更新数据失败，请检查网络连接",Toast.LENGTH_LONG).show();
+                            Toast.makeText(mActivity,mCountyName+"天气数据更新失败，\n请检查网络连接",
+                                    Toast.LENGTH_LONG).show();
                             mActivity.ffc_flag[mPosition]="false";
                         }
 
@@ -372,7 +373,6 @@ public class MyObjectFragment extends Fragment {
         String yestDay_date;
         String transitionDay_date=mspf.getString("transitionDay_date","");
         String today_date=mspf.getString("df_date_day1","");
-        if(!today_date.equals(transitionDay_date)){
             SharedPreferences.Editor mspf_editor=mspf.edit();
             yestDay_date=transitionDay_date;
             transitionDay_date=today_date;
@@ -415,10 +415,10 @@ public class MyObjectFragment extends Fragment {
             mspf_editor.putString("transitionDay_tmp_min",transitionDay_tmp_min);
 
             mspf_editor.apply();
-        }
     }
     
     //show the weather Info on the screen
+
     public void showWeather(){
         //refresh mCountyCode bound to RefreshableView
         mRefreshableView.setData(mCountyCode);
