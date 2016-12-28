@@ -373,6 +373,7 @@ public class MyObjectFragment extends Fragment {
         String yestDay_date;
         String transitionDay_date=mspf.getString("transitionDay_date","");
         String today_date=mspf.getString("df_date_day1","");
+        if(!transitionDay_date.equals(today_date)){
             SharedPreferences.Editor mspf_editor=mspf.edit();
             yestDay_date=transitionDay_date;
             transitionDay_date=today_date;
@@ -415,6 +416,8 @@ public class MyObjectFragment extends Fragment {
             mspf_editor.putString("transitionDay_tmp_min",transitionDay_tmp_min);
 
             mspf_editor.apply();
+        }
+
     }
     
     //show the weather Info on the screen

@@ -99,23 +99,32 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
                     for (int j = 0; j < i; j++) {
                         ffc_flag[j] = "false";
                     }
-                    mfspa = null;
-                    mfspa = new MyFragmentStatePagerAdapter(getSupportFragmentManager(), this);
-                    myViewPager.setAdapter(mfspa);
-                    mTitleText.setText(wnl_spf.getString("selectedCountyName0",""));
-                    initDotGroup();
+                    resetAdapterDataAndCurrentItem();
                 }
                 break;
             case 2:
                 if(resultCode==RESULT_OK) {
-                    mfspa = null;
-                    mfspa = new MyFragmentStatePagerAdapter(getSupportFragmentManager(), this);
-                    myViewPager.setAdapter(mfspa);
-                    mTitleText.setText(wnl_spf.getString("selectedCountyName0",""));
-                    initDotGroup();
+                    resetAdapterDataAndCurrentItem();
                 }
             default:
                 break;
+        }
+    }
+
+    private void resetAdapterDataAndCurrentItem(){
+        mfspa.notifyDataSetChanged();
+        initDotGroup();
+        int itemCount=Integer.parseInt(wnl_spf.getString("selectedCountyCount", "0"));
+        if(nowPageNum<itemCount){
+            myViewPager.setCurrentItem(nowPageNum);
+            mTitleText.setText(wnl_spf.getString("selectedCountyName"+nowPageNum,""));
+            ll_dot_group.getChildAt(nowPageNum).setEnabled(true);
+        }else {
+            itemCount--;
+            lastPageNum=nowPageNum=itemCount;
+            myViewPager.setCurrentItem(itemCount);
+            mTitleText.setText(wnl_spf.getString("selectedCountyName"+itemCount,""));
+            ll_dot_group.getChildAt(itemCount).setEnabled(true);
         }
     }
 
@@ -212,6 +221,9 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
 
         ll_dot_group=(LinearLayout)findViewById(R.id.ll_dot_group);
         initDotGroup();
+        if(!wnl_spf.getString("selectedCountyCount", "0").equals("0")){
+            ll_dot_group.getChildAt(0).setEnabled(true);
+        }
     }
 
     
@@ -299,8 +311,6 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
         int cityCount=Integer.parseInt(tmp);
         float pxScale= DisplayUtil.pxScale(this);
         int lp_wh=(int)(pxScale*6);
-        //reset pageNum in case the dotView shows incorrectly
-        lastPageNum=nowPageNum=0;
         for(int i=0;i<cityCount;i++){
             View dotView=new View(getApplicationContext());
             dotView.setBackgroundResource(R.drawable.dot_selector);
@@ -308,8 +318,6 @@ public class MainActivity extends FragmentActivity implements ViewSwitcher.ViewF
             LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(lp_wh,lp_wh);
             if(i!=0){
                 lp.leftMargin=lp_wh;
-            }else{
-                dotView.setEnabled(true);
             }
             dotView.setLayoutParams(lp);
             ll_dot_group.addView(dotView);

@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5dp"
-            android:text="App Version: v1.0"
+            android:text="App Version: v1.01"
             android:textColor="#ffffff"
             android:textSize="15sp"/>
         <TextView

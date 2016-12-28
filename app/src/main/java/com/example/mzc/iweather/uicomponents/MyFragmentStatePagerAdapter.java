@@ -19,7 +19,7 @@ import java.util.Queue;
  */
 public class MyFragmentStatePagerAdapter extends CustomPagerAdapterInterface {
     private MainActivity mActivity;
-    private int selectedCountyCount;
+    private SharedPreferences mSpf;
     /**提供一个fragment的缓存队列，因为FragmentStatePagerAdapter虽然默认最多只保留3个fragment,
       但其实每次切换页面都会销毁1个fragment和重新创建另一个fragment,但是我们这边还可以再优化一下，
       因为我们各个fragment的UI都是一样的，因此在destroyItem方法中
@@ -33,23 +33,11 @@ public class MyFragmentStatePagerAdapter extends CustomPagerAdapterInterface {
     public MyFragmentStatePagerAdapter(FragmentManager fm, MainActivity activity){
         super(fm);
         mActivity=activity;
-        SharedPreferences mSpf=mActivity.getSharedPreferences("WanNianLi",Context.MODE_PRIVATE);
-        String tmpStr=mSpf.getString("selectedCountyCount","0");
-        selectedCountyCount=Integer.parseInt(tmpStr);
-        if(selectedCountyCount>2){
-            fragmentQueue=new ArrayDeque<>();
-            if(selectedCountyCount==3){
-                for(int i=0;i<3;i++){
-                    MyObjectFragment mof=new MyObjectFragment();
-                    fragmentQueue.add(mof);
-                }
-            }else{
-                for(int i=0;i<4;i++){
-                    MyObjectFragment mof=new MyObjectFragment();
-                    fragmentQueue.add(mof);
-                }
-            }
-
+        mSpf=mActivity.getSharedPreferences("WanNianLi",Context.MODE_PRIVATE);
+        fragmentQueue=new ArrayDeque<>();
+        for(int i=0;i<4;i++){
+            MyObjectFragment mof=new MyObjectFragment();
+            fragmentQueue.add(mof);
         }
 
     }
@@ -58,14 +46,7 @@ public class MyFragmentStatePagerAdapter extends CustomPagerAdapterInterface {
     @Override
     public Fragment getItem(int position) {
         MyObjectFragment mof;
-        if(fragmentQueue!=null){
-            mof=fragmentQueue.poll();
-            if(mof==null){
-                mof=new MyObjectFragment();
-            }
-        }else{
-            mof=new MyObjectFragment();
-        }
+        mof=fragmentQueue.poll();
         mof.initFragment(mActivity,position);
         return mof;
     }
@@ -88,7 +69,12 @@ public class MyFragmentStatePagerAdapter extends CustomPagerAdapterInterface {
 
     @Override
     public int getCount() {
-        return selectedCountyCount;
+        String tmpStr=mSpf.getString("selectedCountyCount","0");
+        return Integer.parseInt(tmpStr);
     }
 
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+    }
 }
