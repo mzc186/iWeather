@@ -137,8 +137,14 @@ public class ChooseCityActivity extends Activity {
                             @Override
                             public void onError(Exception e) {
                                 e.printStackTrace();
-                                Toast.makeText(ChooseCityActivity.this,selectedCounty.getCountyName()
-                                        +"天气数据更新失败，\n请检查网络连接",Toast.LENGTH_SHORT).show();
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        Toast.makeText(ChooseCityActivity.this,selectedCounty.getCountyName()
+                                                +"天气数据更新失败，\n请检查网络连接",Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
                             }
                         });
                     }
